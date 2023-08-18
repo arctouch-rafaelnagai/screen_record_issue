@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:ed_screen_recorder/ed_screen_recorder.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
+import '../screen_recorder/ed_screen_recorder_plugin.dart';
 import '../widgets/flutter_example.dart';
 
 class HomePage extends StatefulWidget {
@@ -36,6 +36,7 @@ class _HomePageState extends State<HomePage> {
       );
       startCountDown();
     } catch (e) {
+      startRecord();
       debugPrint('NAGA: ${e.toString()}');
     }
   }
